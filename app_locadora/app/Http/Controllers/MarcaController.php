@@ -12,9 +12,11 @@ class MarcaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index() //get all
     {
         //
+        $marcas = Marca::all();
+        return $marcas;
     }
 
 
@@ -39,9 +41,10 @@ class MarcaController extends Controller
      * @param  \App\Models\Marca  $marca
      * @return \Illuminate\Http\Response
      */
-    public function show(Marca $marca)
+    public function show(Marca $marca) //get by id
     {
         //
+        return $marca;
     }
 
 
@@ -55,6 +58,8 @@ class MarcaController extends Controller
     public function update(Request $request, Marca $marca)
     {
         //
+        $marca->update($request->all());
+        return $marca;
     }
 
     /**
@@ -66,5 +71,7 @@ class MarcaController extends Controller
     public function destroy(Marca $marca)
     {
         //
+        $marca->delete();
+        return ['msg'=>'A marca foi removida com sucesso'];
     }
 }
