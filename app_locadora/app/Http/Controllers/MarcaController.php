@@ -44,6 +44,11 @@ class MarcaController extends Controller
             'nome' => $request->nome,
             'imagem' => $imagem_urn
         ]);
+        /* outra sintaxe
+         $marca->nome = $request->nome;
+        $marca->imagem = $imagem_urn;
+        $marca->save();
+         */
 
         return response()->json($marca, 201);
 
