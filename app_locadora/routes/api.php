@@ -23,3 +23,4 @@ Route::apiResource('carro', 'App\Http\Controllers\CarroController');
 Route::apiResource('locacao', 'App\Http\Controllers\LocacaoController');
 Route::apiResource('marca', 'App\Http\Controllers\MarcaController');
 Route::apiResource('modelo', 'App\Http\Controllers\ModeloController');
+
